@@ -40,7 +40,7 @@ class _ProductDetailsState extends State<ProductDetails> {
       body: isLoading
           ? Center(
               child:
-                  const CircularProgressIndicator()) // Show a loading indicator while data is being fetched
+                  const CircularProgressIndicator()) 
           : jsondata.isNotEmpty
               ? SingleChildScrollView(
                   child: Column(
@@ -117,8 +117,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                // Optionally add an image here if available
-                                // Image.network(jsondata['reviews'][index]['imageUrl'] ?? '', height: 80, width: 80),
+                                
+                          
                               SizedBox(height: 8),
                                 Text(
                                   jsondata['reviews'][index]['comment'] ??
@@ -155,7 +155,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                   ),
                 )
               : const Text(
-                  "No product details available"), // Handle cases where no data is available
+                  "No product details available"), 
     );
   }
 }
